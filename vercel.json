@@ -1,15 +1,20 @@
 {
     "framework": null,
     "github": { "silent": true },
+    "rewrites": [
+        { 
+            "source": "/:path*", 
+            "destination": "/api/vercel.js"
+        }
+    ],
     "headers": [
         {
-            "source": "/api/(.*)",
+            "source": "/:path*",
             "headers": [
                 { "key": "Access-Control-Allow-Origin", "value": "*" },
                 { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, OPTIONS" },
                 { "key": "Access-Control-Allow-Headers", "value": "X-Requested-With, Accept, Content-Type" }
             ]
         }
-    ],
-    "routes": [{ "src": "/.*", "dest": "/api/vercel.js" }]
+    ]
 }
