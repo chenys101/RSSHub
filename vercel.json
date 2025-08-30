@@ -1,7 +1,6 @@
 {
     "framework": null,
     "github": { "silent": true },
-    "routes": [{ "src": "/.*", "dest": "/api/vercel.js" }],
     "headers": [
     {
       "source": "/api/(.*)",
